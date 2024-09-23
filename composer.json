@@ -1,0 +1,17 @@
+{
+    "name": "hasin/sscw3",
+    "autoload": {
+        "psr-4": {
+            "Hasin\\Sscw3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hasinduvindana",
+            "email": "hasinduvindana@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^4.3"
+    }
+}
