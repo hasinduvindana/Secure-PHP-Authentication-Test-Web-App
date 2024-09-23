@@ -13,7 +13,8 @@ A secure PHP application demonstrating Authentication, Authorization, and Accoun
 
 ## Usage
 
-- Access the application via `http://localhost/SecurePHPAuth/public`.
+- Access the application via `http://localhost/Secure-PHP-Authentication-Test-Web-App
+/public`.
 - Follow the steps in the project documentation for detailed usage.
 
 ## License
