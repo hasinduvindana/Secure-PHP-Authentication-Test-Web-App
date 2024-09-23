@@ -15,7 +15,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <style>
         .mynav {
             border-radius: 10px;
-            box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1); /* Increased shadow for mynav */
+            box-shadow: 0px 20px 60px rgba(0, 0, 255, 0.9); /* Increased shadow for mynav */
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
             color: white;
             padding: 10px;
@@ -27,7 +27,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for container */
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(200, 200, 255, 0.3);
             text-align: center;
         }
 
@@ -97,7 +97,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
     </div>
 
     <script>
-        const images = ["assets/img1.jpg", "assets/img2.jpg", "assets/img3.jpeg"]; // Update image paths
+        const images = ["assets/img1.jpg", "assets/img2.jpg", "assets/img3.jpg"]; // Update image paths
         let currentIndex = 0;
 
         function changeBackground() {

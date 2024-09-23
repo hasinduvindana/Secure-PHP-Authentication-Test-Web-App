@@ -32,35 +32,81 @@ $logs = $stmt->fetchAll();
             font-family: 'Poppins', sans-serif;
         }
     </style>
-</head>
-<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800">
-    <div class="container mx-auto p-8 bg-gray-800 rounded-xl shadow-lg">
-        <h2 class="text-4xl text-center text-white font-semibold mb-8">System Logs</h2>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Logs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #f3f4f6, #ffffff);
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Full-screen container */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Custom table styles */
+        table {
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        th:first-child,
+        td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-10 bg-white rounded-lg shadow-lg max-w-6xl">
+        <h2 class="text-5xl font-extrabold text-center mb-10 text-gray-800">System Logs</h2>
+
+        <!-- Logs Table -->
         <div class="overflow-x-auto">
-            <table class="min-w-full bg-gray-900 text-white rounded-lg shadow-lg">
+            <table class="min-w-full bg-gray-50 text-gray-800 rounded-lg shadow-lg">
                 <thead>
-                    <tr class="bg-blue-600 text-left text-sm uppercase font-medium">
-                        <th class="py-3 px-6">Username</th>
-                        <th class="py-3 px-6">Action</th>
-                        <th class="py-3 px-6">Timestamp</th>
+                    <tr class="bg-gray-300 text-left text-xs uppercase tracking-wide font-semibold text-gray-700">
+                        <th class="py-4 px-6">Username</th>
+                        <th class="py-4 px-6">Action</th>
+                        <th class="py-4 px-6">Timestamp</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($logs as $log): ?>
-                        <tr class="border-b border-gray-700 hover:bg-gray-700">
-                            <td class="py-4 px-6"><?php echo htmlspecialchars($log['username']); ?></td>
-                            <td class="py-4 px-6"><?php echo htmlspecialchars($log['action']); ?></td>
-                            <td class="py-4 px-6"><?php echo htmlspecialchars($log['timestamp']); ?></td>
-                        </tr>
+                    <tr class="bg-white hover:bg-gray-100 transition duration-300">
+                        <td class="py-4 px-6"><?php echo htmlspecialchars($log['username']); ?></td>
+                        <td class="py-4 px-6"><?php echo htmlspecialchars($log['action']); ?></td>
+                        <td class="py-4 px-6"><?php echo htmlspecialchars($log['timestamp']); ?></td>
+                    </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
 
+        <!-- Back to Dashboard Link -->
         <div class="mt-6 text-center">
-            <a href="./dashboard.php" class="text-blue-400 hover:text-blue-300 transition duration-200">Back to Admin Dashboard</a>
+            <a href="./dashboard.php" class="text-blue-600 hover:text-blue-500 transition duration-200">Back to Admin Dashboard</a>
         </div>
     </div>
 </body>
+
 </html>
